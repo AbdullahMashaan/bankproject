@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import Footer from './components/Extras/Footer';
+import NavigationBar from './components/Extras/NavigationBar';
+import { Navigate } from 'react-router';
+import { checkToken } from './API/storage';
+import UserHome from './components/pages/UserHome';
 
 function App() {
+  if (!checkToken()) {
+   
+    return  <Navigate to ="/Home" />
+  }
+
   return (
+
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavigationBar />
+      <div className="background">
+        <UserHome />
+      </div>
+      <Footer />
     </div>
+
   );
 }
 

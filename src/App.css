@@ -2,37 +2,206 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.background {
+  background-image: url('./images/MainPageBackgroung.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+.navbar {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 10px 20px;
   background-color: #282c34;
-  min-height: 100vh;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: aquamarine;
+}
+
+.navbar-BankBName {
+  padding-right: 800px;
+  margin: 10px;
+  font-size: 40px;
+}
+
+.footer ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: aquamarine;
+}
+
+.navbar li, .footer li {
+  margin: 0 10px;
+  color: rgb(127, 153, 255);
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.navbar a, .footer a {
+  color: white;
+  text-decoration: none;
+  color: rgb(127, 153, 255);
+  font-weight: 500;
+}
+
+.navbar-RightPages {
+  color: white;
+  text-decoration: none;
+  color: rgb(127, 153, 255);
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.home, .login, .transactions, .users, .profile {
+  padding: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #282c34;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.register-container {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 120px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 300px;
+}
+
+.input-field {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.register-button {
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  background-color: rgb(127, 153, 255);
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.profile-page { 
+  padding: 20px; 
+}
+
+.user-home-page {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+}
+
+.balance-container, .transaction-container {
+  background: rgba(173, 216, 230, 0.8); /* Light blue background */
+  padding: 20px;
+  border-radius: 15px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.balance-container h1 {
+  margin: 0;
+}
+
+.transaction-container .transaction-button {
+  margin: 10px 5px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #dc3545; /* Default red for not active */
   color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.transaction-container .transaction-button.active {
+  background-color: #28a745; /* Green for active */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.submit-button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.transactions-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  margin: 20px 0;
+}
+
+.transactions-page .search-input {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 300px;
+}
+
+.transactions-page .button-container {
+  margin-bottom: 20px;
+}
+
+.transactions-page .button-container button {
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.transactions-page .date-inputs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.transactions-page .date-input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
