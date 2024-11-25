@@ -1,13 +1,19 @@
 import { register } from "../../API/auth";
 import React from 'react';
 import { useMutation } from '@tanstack/react-query'
+import { Navigate, useNavigate } from "react-router";
+
+const navigate = useNavigate()
 
 const mutation = useMutation ({
   mutationKey: ["register"],
-    mutationFn: (userInfo)=>register(userInfo)
+    mutationFn: (formData)=>register(formData),
+    onSuccess: () => {
+      navigate("/")
+    }
 })
-const handleFormSubmit = (event) => {
-    event.preventDefault();
+const handleFormSubmit = (formData) => {
+    mutation.mutate(formData)
 }
 
 function Register() {
